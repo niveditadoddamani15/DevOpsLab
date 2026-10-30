@@ -1,0 +1,23 @@
+
+name: Continuous Integration
+
+on:
+  push:
+    branches: [main]
+
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build project
+        run: mingw32-make build
+
+      - name: Test project
+        run: mingw32-make test
