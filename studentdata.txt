@@ -1,4 +1,4 @@
-Incorrect Data
+Student Data
 Name: Rahul
 USN: 101
 Marks: 85
